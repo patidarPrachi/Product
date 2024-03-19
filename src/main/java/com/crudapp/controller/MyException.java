@@ -18,20 +18,4 @@ import com.crudapp.exception.ProductException;
 			m.addAttribute("msg",ex.getMessage());
 			return "null_page";
 		}
-		
-		@ResponseStatus(value=HttpStatus.INTERNAL_SERVER_ERROR)
-		@ExceptionHandler(value=NullPointerException.class)
-		public String exceptionHandlerNull(Model m) {
-			m.addAttribute("msg","Null Pointer Exception has occured..." );
-			return "null_page";
-		}
-		
-		@ResponseStatus(value=HttpStatus.INTERNAL_SERVER_ERROR)
-		@ExceptionHandler(value=NumberFormatException.class)
-		public String exceptionHandlerNumberFormat(Model m) {
-			m.addAttribute("msg","Number Format Exception has occured..." );
-			return "null_page";
-		}
-		
-		
 }
